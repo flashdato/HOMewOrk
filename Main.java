@@ -1,17 +1,9 @@
-package ge.edu.itvet;
+package ge.george;
+import ge.george.linkedlist.LinkedList;
 
-import javax.swing.*;
+public class Main {
 
-class Main {
-    public static void main(String[] arg) {
-        MyPanel myPanel = new MyPanel();
-        JFrame jframe = new JFrame();
-        jframe.add(myPanel);
-        jframe.pack();
-        jframe.setTitle("TicTacToe");
-        jframe.doLayout();
-        jframe.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        jframe.setResizable(true);
-        jframe.setVisible(true);
-    }
-}
+    public static void main(String[] args) {
+      LinkedList<Integer>  list = new LinkedList<>();
+
+}}
