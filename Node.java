@@ -1,36 +1,61 @@
-package ge.george.linkedlist;
+package ge.george.binarytree;
 
-public class Node<K> {
-    private Node<K> prev;
-    private Node<K> next;
-    private K key;
-    public Node(){}
-    public Node(K key){
-        setKey(key);
+public class Node<V> {
+    private V value;
+    private Node<V> left;
+    private Node<V> right;
+    private Node<V> predecessor;
+
+    public Node() {
     }
 
-    public void setKey(K key) {
-        this.key = key;
+    public Node(V value) {
+        this.value = value;
     }
 
-    public void setNext(Node<K> next) {
-        this.next = next;
+    public V getValue() {
+        return value;
     }
 
-    public void setPrev(Node<K> prev) {
-        this.prev = prev;
+    public void setValue(V value) {
+        this.value = value;
     }
 
-    public K getKey() {
-        return key;
+    public Node<V> getLeft() {
+        return left;
     }
 
-    public Node<K> getNext() {
-        return next;
+    public void setLeft(Node<V> left) {
+        this.left = left;
     }
 
-    public Node<K> getPrev() {
-        return prev;
+    public Node<V> getRight() {
+        return right;
+    }
+
+    public void setRight(Node<V> right) {
+        this.right = right;
+    }
+
+    public Node<V> getPredecessor() {
+        return predecessor;
+    }
+
+    public void setPredecessor(Node<V> predecessor) {
+        this.predecessor = predecessor;
+    }
+
+    @Override
+    public String toString() {
+        if(left==null && right == null ){
+            return value.toString();
+        }
+        if(left==null ) {
+            return value+ "\n  r = " + right  ;
+        }
+        if(right==null ) {
+            return value + "\n l = " + left ;
+        }
+        return value + "\n l = " + left + " r = "+ right;
     }
 }
-
